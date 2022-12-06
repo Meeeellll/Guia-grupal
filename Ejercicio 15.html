@@ -1,0 +1,148 @@
+<!-- Se cuenta con la siguiente información:
+Las edades de 5 estudiantes del turno mañana.
+Las edades de 6 estudiantes del turno tarde.
+Las edades de 11 estudiantes del turno noche.
+Las edades de cada estudiante deben ingresarse por teclado.
+a) Obtener el promedio de las edades de cada turno (tres promedios).
+b) Imprimir dichos promedios (promedio de cada turno).
+c) Mostrar por pantalla un mensaje que indique cual de los tres turnos tiene un promedio de edades
+mayor. --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15</title>
+</head>
+<body>
+    <form name="datos">
+        <p>Ingrese las edades de los estudiantes del turno de la mañana:</p>
+
+        <br>
+        <input type="number" id="m-1">
+        <input type="number" id="m-2">
+        <input type="number" id="m-3">
+        <input type="number" id="m-4">
+        <input type="number" id="m-5">
+
+        <br>
+        <p>Ingrese las edades de los estudiantes del turno de la tarde:</p>
+
+        <br>
+        <input type="number" id="t-1">
+        <input type="number" id="t-2">
+        <input type="number" id="t-3">
+        <input type="number" id="t-4">
+        <input type="number" id="t-5">
+        <input type="number" id="t-6">
+
+        <br>
+
+        <p>Ingrese las edades de los estudiantes del turno de la noche:</p>
+
+        <br>
+        <input type="number" id="n-1">
+        <input type="number" id="n-2">
+        <input type="number" id="n-3">
+        <input type="number" id="n-4">
+        <input type="number" id="n-5">
+        <input type="number" id="n-6">
+
+        <br>
+        <input type="number" id="n-7">
+        <input type="number" id="n-8">
+        <input type="number" id="n-9">
+        <input type="number" id="n-10">
+        <input type="number" id="n-11">
+
+        <br>
+        <br>
+        <input type="button" value="Promedio mañana" id="promedio-m" onclick="manana()">
+        <input type="button" value="Promedio tarde" id="promedio-t" onclick="tarde()">
+        <input type="button" value="Promedio noche" id="promedio-n" onclick="noche()">
+        <input type="button" value="Promedio tres turnos" id="promedio-tres" onclick="tresturnos()">
+    </form>
+
+
+    <script>
+        function manana(){
+
+            var estm1 = document.getElementById('m-1')
+            var estm2 = document.getElementById('m-2')
+            var estm3 = document.getElementById('m-3')
+            var estm4 = document.getElementById('m-4')
+            var estm5 = document.getElementById('m-5')
+
+            let promediomanana = (parseInt(estm1.value) + parseInt(estm2.value) + parseInt(estm3.value) + parseInt(estm4.value) + parseInt(estm5.value)) / 5
+            alert('El promedio de estudiantes en el turno de la manana es: ' +promediomanana)
+        }
+
+        function tarde(){
+
+            var estt1 = document.getElementById('t-1')
+            var estt2 = document.getElementById('t-2')
+            var estt3 = document.getElementById('t-3')
+            var estt4 = document.getElementById('t-4')
+            var estt5 = document.getElementById('t-5')
+            var estt6 = document.getElementById('t-6')
+
+            let promediotarde = (parseInt(estt1.value) + parseInt(estt2.value) + parseInt(estt3.value) + parseInt(estt4.value) + parseInt(estt5.value) + parseInt(estt6.value)) / 6
+            alert('El promedio de estudiantes en el turno de la tarde es: '+promediotarde)
+        }
+
+        function noche(){
+
+            var estn1 = document.getElementById('n-1')
+            var estn2 = document.getElementById('n-2')
+            var estn3 = document.getElementById('n-3')
+            var estn4 = document.getElementById('n-4')
+            var estn5 = document.getElementById('n-5')
+            var estn6 = document.getElementById('n-6')
+            var estn7 = document.getElementById('n-7')
+            var estn8 = document.getElementById('n-8')
+            var estn9 = document.getElementById('n-9')
+            var estn10 = document.getElementById('n-10')
+            var estn11 = document.getElementById('n-11')
+
+            let promedionoche = (parseInt(estn1.value) + parseInt(estn2.value) + parseInt(estn3.value) + parseInt(estn4.value) + parseInt(estn5.value) + parseInt(estn6.value) + parseInt(estn7.value) + parseInt(estn8.value) + parseInt(estn9.value) + parseInt(estn10.value) + parseInt(estn11.value)) / 11
+            alert('El promedio de estudiantes en el turno de la tarde es: '+promedionoche)
+        }
+
+        function tresturnos(){
+            var estm1 = document.getElementById('m-1')
+            var estm2 = document.getElementById('m-2')
+            var estm3 = document.getElementById('m-3')
+            var estm4 = document.getElementById('m-4')
+            var estm5 = document.getElementById('m-5')
+
+            var estt1 = document.getElementById('t-1')
+            var estt2 = document.getElementById('t-2')
+            var estt3 = document.getElementById('t-3')
+            var estt4 = document.getElementById('t-4')
+            var estt5 = document.getElementById('t-5')
+            var estt6 = document.getElementById('t-6')
+
+            var estn1 = document.getElementById('n-1')
+            var estn2 = document.getElementById('n-2')
+            var estn3 = document.getElementById('n-3')
+            var estn4 = document.getElementById('n-4')
+            var estn5 = document.getElementById('n-5')
+            var estn6 = document.getElementById('n-6')
+            var estn7 = document.getElementById('n-7')
+            var estn8 = document.getElementById('n-8')
+            var estn9 = document.getElementById('n-9')
+            var estn10 = document.getElementById('n-10')
+            var estn11 = document.getElementById('n-11')
+
+            let promediotresturnos = (parseInt(estm1.value) + parseInt(estm2.value) + parseInt(estm3.value) + parseInt(estm4.value) + parseInt(estm5.value) +
+                                      parseInt(estt1.value) + parseInt(estt2.value) + parseInt(estt3.value) + parseInt(estt4.value) + parseInt(estt5.value) + parseInt(estt6.value) +
+                                      parseInt(estn1.value) + parseInt(estn2.value) + parseInt(estn3.value) + parseInt(estn4.value) + parseInt(estn5.value) + parseInt(estn6.value) + 
+                                      parseInt(estn7.value) + parseInt(estn8.value) + parseInt(estn9.value) + parseInt(estn10.value) + parseInt(estn11.value)) / 22
+        }
+
+    </script>   
+    
+</body>
+</html>

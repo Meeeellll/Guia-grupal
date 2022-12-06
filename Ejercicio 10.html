@@ -1,0 +1,82 @@
+<!-- ( Crear una Fuction, en una pàgina web, donde el usuario introduce su altura (cm), edad, sexo
+y peso actual. El programa responde con una referencia de peso aproximado.
+Por ejemplo:
+Usuario introduce 176, 22, H, 79.
+El programa ejecuta la fórmula: 50 + ((Altura-150) / 4) *3 + (Edad – 20) /4 * (0.9 si es mujer)
+El resultado es: peso referencia = 70,5 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+</head>
+<body>
+
+    <table>
+        <form>
+            <tr>
+                <td>
+                    <label>Altura: (en cm)</label>
+                </td>
+                <td>
+                    <input type="number" id="altura" placeholder="150 cm">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Peso actual:</label>
+                </td>
+                <td>
+                    <input type="number" id="peso" placeholder="70">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Edad:</label>
+                </td>
+                <td>
+                    <input type="number" id="edad" placeholder="13">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Sexo:</label>
+                </td>
+                <td>
+                    <input type="button" value="Hombre" onclick="calcularPesoHombre()">
+                    <input type="button" value="Mujer" onclick="calcularPesoMujer()">
+                </td>
+            </tr>
+        </form>
+    </table>
+
+
+    <script>
+        function calcularPesoMujer(){
+
+            var altura = document.getElementById('altura')
+            var peso = document.getElementById('peso')
+            var edad = document.getElementById('edad')
+            
+            peso_preferencia = parseInt(altura.value - 100 - ((edad.value - 150) / 2.5))
+            alert('Su peso ideal es: '+peso_preferencia)
+        }
+
+        function calcularPesoHombre(){
+            var altura, peso, edad, peso_preferencia
+
+            altura = document.getElementById('altura')
+            peso = document.getElementById('peso')
+            edad = document.getElementById('edad')
+
+            peso_preferencia = parseInt(altura.value - 100 - ((edad.value - 150) / 4))
+            alert('Su peso ideal es: '+peso_preferencia)
+        }
+
+    </script>
+    
+</body>
+</html>
