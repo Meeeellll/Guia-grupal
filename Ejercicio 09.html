@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+    <h1>Programa que permite al usuario introducir dos notas y su valor ponderado 
+        <br>(nota 1= 30%, nota 2=70%) y muestra como resultado la nota media ponderada</h1>
+
+    <form name="calculadora">
+        Ingresar la nota 1 <input type="number" name="n1"><br><br>
+        Ingrear la nota 2 <input type="number" name="n2"><br><br>
+         
+        <input type="button" name="button1" value="calcular" onclick="suma()">
+       <br>
+       <br>
+        
+        Su ponderacion es:
+        <input type="number" name="resultado">
+    </form>
+
+    <script>
+
+        function suma(){
+            let n1, n2, resultado;
+            
+            n1 = parseInt(document.calculadora.n1.value);
+            n2 = parseInt(document.calculadora.n2.value);
+            resultado=0
+            resultado=n1*0.30+n2*0.70;
+            document.calculadora.resultado.value=resultado.toFixed(2);
+        }
+
+        
+    </script>
+</body>
+</html>
