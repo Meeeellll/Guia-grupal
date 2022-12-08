@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 14</title>
+</head>
+<body>
+ <h1> <strong>Se realiza la carga de 10 valores enteros por teclado. Se desea conocer:</strong> </h1>
+    <h3>a. La cantidad de valores negativos ingresados. <br>
+       b. La cantidad de valores positivos ingresados. <br>
+       c. La cantidad de múltiplos de 15. <br>
+       d. El valor acumulado de los números ingresados que son pares.</h3> 
+    <script>
+      
+
+        let cantidad_negativos = 0;
+        let cantidad_positivos = 0;
+        let multiplos_15 = 0;
+        let suma_pares = 0;
+        for (let i= 1; i <= 10; i++) {
+            let valor = parseInt(prompt('Ingrese un valor:'));
+            if (valor < 0) {
+                cantidad_negativos++;
+            } else {
+                if (valor > 0) {
+                    cantidad_positivos++;
+                }
+            }
+            if (valor % 15 == 0 && valor != 0) {
+                multiplos_15++;
+            }
+            if (valor % 2 == 0) {
+                suma_pares = suma_pares + valor;
+            }
+        }
+        document.write('Cantidad de valores negativos:' + cantidad_negativos + '<br>');
+        document.write('Cantidad de valores positivos:' + cantidad_positivos + '<br>');
+        document.write('Cantidad de múltiplos de 15:' + multiplos_15 + '<br>');
+        document.write('Valor acumulado de los pares ingresados:' + suma_pares );
+    </script>
+
+</body>
+
+</html>     
